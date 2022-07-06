@@ -21,7 +21,7 @@ class EncryptFragment : Fragment() {
         val encrypted_textView = view.findViewById<TextView>(R.id.encrypted_message)
         val message = EncryptFragmentArgs.fromBundle(requireArguments()).messageToEncrypt.reversed()
         encrypted_textView.text = message.reversed()
-        // Inflate the layout for this fragment
+
         return view
     }
 
