@@ -20,7 +20,7 @@ class WelcomeFragment : Fragment() {
         startButton.setOnClickListener(){
             view.findNavController().navigate(R.id.action_welcomeFragment_to_messageFragment)
         }
-        // Inflate the layout for this fragment
+
         return view
     }
 }
