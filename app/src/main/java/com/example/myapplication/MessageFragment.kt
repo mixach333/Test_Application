@@ -20,6 +20,14 @@ class MessageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_message, container, false)
+
+        initView(view)
+
+        return view
+    }
+
+    private fun initView(view: View?) {
+        requireNotNull(view)
         val next_button = view.findViewById<Button>(R.id.next_button)
 
         next_button.setOnClickListener(){
@@ -27,7 +35,6 @@ class MessageFragment : Fragment() {
             val action = MessageFragmentDirections.actionMessageFragmentToEncryptFragment(message)
             view.findNavController().navigate(action)
         }
-        return view
     }
 
 }
